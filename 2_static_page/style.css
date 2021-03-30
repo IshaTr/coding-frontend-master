@@ -1,0 +1,179 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+button {
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+
+.page-container {
+  padding: 2rem 4rem;
+  max-width: 1400px;
+}
+
+.page-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-left: 5rem;
+}
+
+.wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.content-wrapper {
+  width: 60%;
+}
+
+.content-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #999;
+  padding: 24px;
+  margin-bottom: 4rem;
+}
+
+.content-box>h3{
+  margin-top: 0;
+}
+
+.content-header {
+  width: 100%;
+  border-bottom: 1px solid #999;
+}
+
+.primary-button {
+  padding: 8px;
+  height: 42px;
+  width: 100%;
+  background-image: url('./static/images/message-icon.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 10px center;
+}
+
+.ad-image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ad-image {
+  height: 250px;
+  width: 500px
+}
+
+.back-icon {
+  height: 32px;
+  width: 32px;
+  margin-right: 4px;
+}
+
+.message-box-wrapper {
+  width: 18%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  border: 1px solid #999;
+  margin-left: 6rem;
+}
+
+.button-wrapper {
+  margin-top: 2rem;
+  width: 30%;
+}
+
+@media only screen and (max-width: 1024px) {
+  .page-header {
+    padding-left: 3rem;
+  }
+
+  .content-wrapper, .button-wrapper {
+    width: 50%;
+  }
+
+  .message-box-wrapper {
+    width: 24%;
+  }
+
+  .ad-image {
+    width: unset;
+    height: 180px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .page-header {
+    padding-left: 0;
+  }
+
+  .content-wrapper {
+    width: 100%;
+  }
+
+  .button-wrapper {
+    width: 100%;
+  }
+
+  .message-box-wrapper {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  .ad-image {
+    width: unset;
+    height: 180px;
+  }
+
+  .content-box {
+    width: 92%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .page-container {
+    padding: 2rem;
+  }
+
+  .page-header {
+    padding-left: 0;
+  }
+
+  .content-wrapper, .button-wrapper {
+    width: 100%;
+  }
+
+  .content-box {
+    width: 85%;
+    margin-bottom: 2rem;
+  }
+
+  .message-box-wrapper {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .ad-image {
+    width: unset;
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .ad-image {
+    height: 120px;
+  }
+}

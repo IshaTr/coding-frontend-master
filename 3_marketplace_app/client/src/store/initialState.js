@@ -1,8 +1,14 @@
 const initialState = {
   allAds: [],
-  activeAdDetail: null,
+  activeAdDetail: {
+    id: null,
+    title: null,
+    imageUrl: null,
+    userId: null
+  },
   starredAds: [],
-  error: null
+  error: null,
+  loading: false
 }
 
-export default initialState;
+export default initialState

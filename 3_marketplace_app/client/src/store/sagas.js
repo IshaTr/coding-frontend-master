@@ -1,41 +1,40 @@
-import {all, call, put, takeEvery, takeLatest} from 'redux-saga/effects'
+import { all, call, put, takeLatest } from 'redux-saga/effects'
 import * as types from './types'
 
-import {fetchAds, fetchAdDetail} from './requests'
+import { fetchAds, fetchAdDetail } from './requests'
 
 function* fetchAdsSaga() {
   try {
     const response = yield call(fetchAds)
+    const { data } = response
 
     yield put({
       type: types.FETCH_ADS_SUCCESS,
-      data: response
+      payload: data
     })
-    console.log(response)
   } catch (error) {
     yield put({
       type: types.FETCH_ADS_ERROR,
-      error
+      payload: error.message
     })
   }
 }
 
 function* fetchAdDetailSaga(action) {
   try {
-    const response = yield call(fetchAdDetail, action.payload.id)
+    const response = yield call(fetchAdDetail, action.payload)
 
     yield put({
       type: types.FETCH_AD_DETAIL_SUCCESS,
-      data: response
+      payload: response.data
     })
   } catch (error) {
     yield put({
       type: types.FETCH_AD_DETAIL_ERROR,
-      error
+      payload: error.message
     })
   }
 }
-
 
 export default function* rootSaga() {
   yield all([

@@ -101,8 +101,26 @@ You can start our React example application by:
 
 What would you do if you had more time? Which trade-offs did you take? What architecture-layers did you create and why?
 
-- FILL-ME 1
-- FILL-ME 2
+- Improvements: Add more tests for task 3.
+Add more functionalities like search and filter for task 3.
+Make the marketplace website responsive.
+Add theme for standard colors, paddings, margins.
+- For the 3rd task since the UI was to be reconsidered, I focused more on the design and UX part.
+Secondly, I mainly concentrated on keeping the reusability as much as there can be.
+The, tests were added to check if the UI is behaving the way it's supposed to be.
+Also, the new tools in React were used and the usage of class components was purely avoided.
+- Make the marketplace task, since there was a mock api to fetch the data from, using an architecture
+with redux saga made more sense in order for more sacalability.
+
+The common components were kept modular and reusable in the common folder.
+
+Also, the Header and SideNav component were grouped together in navigation folder for a clearer picture.
+
+The App.js component is kept minimalistic and without any functionalities happening directly from there itself.
+
+A new Home.js file was created that maintained all the router logic and initial component rendering.
+
+Usage of styled-components has beendone excessively in order to maintain style modularity and much cleaner code.
 
 Have fun!
 
